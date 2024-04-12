@@ -1,0 +1,98 @@
+[versions]
+agp = "8.4.0-beta01"
+kotlin = "1.9.0"
+coreKtx = "1.12.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.7.0"
+activityCompose = "1.8.2"
+composeBom = "2024.04.00"
+firebaseCrashlyticsBuildtools = "2.9.9"
+hilt = "2.49"
+ksp = "1.9.0-1.0.13"
+googleGsmServices = "4.4.1"
+iconVersion = "1.6.5"
+coroutinesVersion = "1.7.3"
+coilVersion = "2.5.0"
+datastoreVersion = "1.0.0"
+mockitoVersion = "5.2.1"
+spalshScreenVersion="1.0.1"
+ktor-client-core = "2.3.1"
+ktor-client-cio = "2.3.1"
+ktor-client-auth = "2.3.1"
+nav_version = "2.7.7"
+navigationRuntimeKtx = "2.7.7"
+navigationCompose = "2.7.7"
+playServicesMaps = "18.2.0"
+play-services-location= "21.0.1"
+maps-compose= "2.9.0"
+#navigationRuntimeKtxVersion = "2.7.7"
+#retrofit = "2.9.0"
+#converter-gson = "2.9.0"
+
+[libraries]
+#Android Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+#Splash Screen
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "spalshScreenVersion" }
+
+#Local/unit test
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoVersion" }
+
+#Instrumented Tests
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+#Android Lifecycle Runtime
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
+
+#compose
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+
+#Navigation
+androidx-navigation-compose = { group = "androidx.navigation:navigation-compose", name = "navigation-compose", version.ref = "nav_version" }
+#androidx-navigation-runtime-ktx = {group= "androidx.navigation:navigation-runtime-ktx", name="navigation-runtime-ktx", version.ref = "navigationRuntimeKtxVersion"}
+#Coroutines
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
+#Coil
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilVersion" }
+#DataStore
+androidx-datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastoreVersion" }
+#dagger hilt
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+
+#Material3 Design
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-material-extended-icon = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "iconVersion" }
+
+firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
+#KTOR
+ktor-client-core = { group = "io.ktor:ktor-client-core", name="ktor-core", version.ref="ktor-client-core"}
+ktor-client-cio = {group = "io.ktor:ktor-client-cio", name="ktor-cio", version.ref="ktor-client-cio"}
+ktor-client-auth ={group = "io.ktor:ktor-client-auth", name="ktor-auth", version.ref="ktor-client-auth"}
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+#Google services
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+#play-service-location = { group = "com.google.android.gms:play-services-location", name ="paly-service-location", version.ref = "play-services-location"}
+#maps-compose = {group = "com.google.maps.android", name = "maps-compose", version.ref="maps-compose"}
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+googleDevToolsKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+daggerHiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+#googleGmsServices = { id = "com.google.gms.google-services", version.ref = "googleGsmServices" }
